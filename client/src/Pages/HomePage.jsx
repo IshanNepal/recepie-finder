@@ -1,8 +1,11 @@
 import React from 'react'
+import SearchCard from '../components/SearchCard.Jsx';
 
 const HomePage = () => {
   return (
-    <div>HomePage</div>
+    <section className='SearchCardSection'>
+        <SearchCard />
+    </section>
   )
 }
 

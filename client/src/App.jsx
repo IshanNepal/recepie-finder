@@ -2,6 +2,7 @@ import { Toaster } from "react-hot-toast";
 import { Routes, Route } from "react-router-dom"
 import HomePage from "./Pages/HomePage";
 import Layout from "./Layout";
+import ResultsPage from "./Pages/ResultsPage";
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
         <Routes>
             <Route element={<Layout />} >
                 <Route index element={<HomePage />} />
+                <Route path="meals_result" element={<ResultsPage />}/>
             </Route>
         </Routes>
     </>
