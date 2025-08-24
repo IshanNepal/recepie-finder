@@ -7,7 +7,7 @@ const HeaderComponent = () => {
        <header className='flex justify-between p-4 shadow-md items-center bg-base-200 sticky top-0 z-10'>
         <div className="Main flex gap-4 items-center">
             <LayoutGrid size={30} />
-            <div className="Head flex gap-2 items-center">
+            <div className="Head flex gap-2 items-center" onClick={() => navigate('/')}>
                 <div className="Logo  ">
                     <Panda size={25}/>
                 </div>

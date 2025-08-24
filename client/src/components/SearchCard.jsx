@@ -8,7 +8,8 @@ const SearchCardComponent = () => {
     const [mainIngredients, setMainIngredients] = useState('');
 
     // Defining HandleSearchMainIngreditents Fucntion
-    const handleSearchMainIngredients = async () => {
+    const handleSearchMainIngredients = async (e) => {
+        e.preventDefault()
         const main_ing = mainIngredients.toLocaleLowerCase().trim();
         const fixed_main_ing = main_ing.replaceAll(" ", "_");
         try{
@@ -43,7 +44,7 @@ const SearchCardComponent = () => {
                 <input type='text' placeholder='Enter Your Main Ingredient!' className='p-2 bg-base-200 rounded-md outline-none' onChange={(e) => setMainIngredients(e.target.value)}/>
             </div>
             <div className="Actions w-full flex flex-col justify-center">
-                <button className='bg-accent p-2 text-white rounded-md' onClick={()=> handleSearchMainIngredients()}>Search</button>
+                <button className='bg-accent p-2 text-white rounded-md' onClick={(e)=> handleSearchMainIngredients(e)} type='sumbit'>Search</button>
             </div>
         </div>
     </div>

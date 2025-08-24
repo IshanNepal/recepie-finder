@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom"
 import HomePage from "./Pages/HomePage";
 import Layout from "./Layout";
 import ResultsPage from "./Pages/ResultsPage";
+import InfoPage from "./Pages/InfoPage";
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
             <Route element={<Layout />} >
                 <Route index element={<HomePage />} />
                 <Route path="meals_result" element={<ResultsPage />}/>
+                <Route path="/meals_result/meals/:id" element={<InfoPage/>} />
             </Route>
         </Routes>
     </>
